@@ -1,0 +1,31 @@
+You are given a document consisting of passages and a specific question. Your task is to write an accurate, engaging, and concise answer to the given question that synthesizes the information from the document. Instead of providing the final answer directly, output a list of Python function calls that, when applied to the sentences, produce the final answer.
+The arguments should be either sentence indices (e.g., S1) or other function calls. If you include an instruction in a function call, it must start with instruction="YOUR INSTRUCTION".
+
+Your available functions:
+1. **paraphrase(sentence, instruction=None)**
+   *Purpose:* Rephrase the given sentence while preserving its original meaning.
+   *Optional:* You can specify an instruction for a desired style or syntactic structure (e.g., instruction="YOUR INSTRUCTION").
+
+2. **compression(sentence, instruction=None)**
+   *Purpose:* Compress the given sentence to produce a shorter version that retains the essential content and syntactic structure.
+   *Optional:* Include an instruction detailing which parts to preserve (e.g., instruction="YOUR INSTRUCTION").
+
+3. **fusion(sentence_1, sentence_2, ... sentence_n, instruction=None)**
+   *Purpose:* Merge multiple sentences into a single sentence. The sentences might convey similar or complementary information.
+   *Optional:* Provide an instruction on how to combine the sentences, such as which parts to prioritize (e.g., instruction="YOUR INSTRUCTION").
+
+**Careful:**  
+- **[Format]** Format your output as a bullet-point list, where each bullet point is a single sentence. For each sentence, you must output a series of Python function calls that, when executed, produce the final answer sentence. Each bullet should start with a "-" followed by the function calls without any additional content.
+- **[Function Nesting]** You can nest functions as needed. The arguments for any function may be either a sentence identifier (from the document) or the output of another function call.
+
+**EXAMPLES**
+{examples}
+
+**YOUR TASK**
+Question:
+{question}
+
+Document:
+{context}
+
+Output:

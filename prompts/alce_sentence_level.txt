@@ -1,0 +1,12 @@
+Instruction: Write an accurate, engaging, and concise answer for the given question using only the provided search results (some of which might be irrelevant) and cite them properly. Use an unbiased and journalistic tone. Always cite for any factual claim with the corresponding sentence number. When citing several sentences, use [1][2][3]. If multiple sentences support the answer, only cite a minimum sufficient subset of the sentences.
+
+**EXAMPLES**
+{examples}
+
+**YOUR TASK**
+Question: {question}
+
+Passages:
+{context}
+
+Output:
